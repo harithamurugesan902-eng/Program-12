@@ -1,6 +1,3 @@
--- RDBMS PROGRAM 12
--- COLLEGE MANAGEMENT SYSTEM - ER RELATIONSHIPS
-
 CREATE TABLE Department (
     DepartmentID INT PRIMARY KEY,
     DepartmentName VARCHAR(50)
@@ -40,34 +37,24 @@ CREATE TABLE Enrollment (
     FOREIGN KEY (CourseID)
         REFERENCES Course(CourseID)
 );
-
--- Department: 3 records
 INSERT INTO Department VALUES
 (1, 'Computer Science'),
 (2, 'Mathematics'),
 (3, 'Commerce');
-
--- Student: 4 records
 INSERT INTO Student VALUES
 (1001, 'Arun', 1),
 (1002, 'Priya', 2),
 (1003, 'Kumar', 1),
 (1004, 'Divya', 3);
-
--- Faculty: 3 records
 INSERT INTO Faculty VALUES
 (101, 'Dr. Ravi', 1),
 (102, 'Dr. Meena', 2),
 (103, 'Dr. Kumar', 3);
-
--- Course: 4 records
 INSERT INTO Course VALUES
 (201, 'Database Systems', 101),
 (202, 'Data Structures', 101),
 (203, 'Mathematics', 102),
 (204, 'Accounting', 103);
-
--- Enrollment: 5 records
 INSERT INTO Enrollment VALUES
 (1001, 201, '2026-01-10'),
 (1001, 202, '2026-01-10'),
